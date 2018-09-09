@@ -4,12 +4,12 @@ Ext.define('app.view.user.Register', {
     extend: 'app.view.widget.LockingWindow',
     xtype: 'register',
     controller: 'user',
-    title: '注册',
+    header: false,
     items: [{
         cls: 'auth-dialog',
         xtype: 'form',
-        bodyPadding: '20 20',
-        width: 455,
+        bodyPadding: '68 120',
+        width: 620,
         defaultButton: 'submitButton',
         layout: {
             type: 'vbox',
@@ -31,11 +31,6 @@ Ext.define('app.view.user.Register', {
             allowBlank: false,
             fieldLabel: '姓名',
             name: 'fullName',
-            triggers: {
-                glyphed: {
-                    cls: 'trigger-glyph-noop auth-email-trigger'
-                }
-            }
         },
         {
             xtype: 'textfield',
@@ -44,11 +39,6 @@ Ext.define('app.view.user.Register', {
             allowBlank: false,
             name: 'userid',
             fieldLabel: '用户名',
-            triggers: {
-                glyphed: {
-                    cls: 'trigger-glyph-noop auth-email-trigger'
-                }
-            }
         },
         {
             xtype: 'textfield',
@@ -58,11 +48,6 @@ Ext.define('app.view.user.Register', {
             name: 'email',
             fieldLabel: '邮箱',
             vtype: 'email',
-            triggers: {
-                glyphed: {
-                    cls: 'trigger-glyph-noop auth-envelope-trigger'
-                }
-            }
         },
         {
             xtype: 'textfield',
@@ -72,11 +57,6 @@ Ext.define('app.view.user.Register', {
             fieldLabel: '密码',
             name: 'password',
             inputType: 'password',
-            triggers: {
-                glyphed: {
-                    cls: 'trigger-glyph-noop auth-password-trigger'
-                }
-            }
         },
         {
             xtype: 'checkbox',
@@ -101,7 +81,6 @@ Ext.define('app.view.user.Register', {
             reference: 'submitButton',
             margin: '5 0',
             iconAlign: 'right',
-            iconCls: 'x-fa fa-angle-right',
             text: '注册',
             listeners: {
                 click: 'onRegister'

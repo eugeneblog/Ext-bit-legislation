@@ -4,13 +4,13 @@ Ext.define('app.view.user.Reset', {
     extend: 'app.view.widget.LockingWindow',
     xtype: 'userreset',
     controller: 'user',
-    title: '找回密码',
+    header: false,
     items: [{
         cls: 'auth-dialog',
         xtype: 'form',
-        width: 455,
+        width: 620,
         defaultButton: 'resetPassword',
-        bodyPadding: '20 20',
+        bodyPadding: '68 120',
         layout: {
             type: 'vbox',
             align: 'stretch'
