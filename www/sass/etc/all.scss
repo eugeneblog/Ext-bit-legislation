@@ -1,0 +1,126 @@
+/*#region 自定义mixin*/
+@mixin btn-border($background-color) {
+    background-color: $background-color;
+    border-color: $background-color !important;
+
+    .x-btn-inner-default-toolbar-small {
+        color: $lightest-color;
+    }
+
+    &:hover {
+        background-color: transparent;
+
+        .x-btn-inner-default-toolbar-small,
+        .x-btn-inner-default-small {
+            color: $background-color;
+        }
+
+        .x-btn-icon-el-default-small,
+        .x-btn-icon-el-default-toolbar-small {
+            color: $background-color;
+        }
+    }
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    -ms-box-shadow: $value;
+    box-shadow: $value;
+}
+
+@mixin bg($size,$position: center) {
+    -moz-background-size: $size;
+    -o-background-size: $size;
+    -webkit-background-size: $size;
+    background-size: $size;
+    background-repeat: no-repeat;
+    background-position: $position;
+}
+/*#endregion*/
+/*#region 默认样式*/
+// 兼容ico配置
+body.x-ios.x-webview.x-portrait {
+    margin-top: 20px;
+}
+
+.x-menu-header {
+    z-index: 0 !important;
+}
+
+.x-css-shadow {
+    box-shadow: none !important;
+}
+
+.shadow {
+    @include box-shadow(0 1px 2px 0 rgba(0,0,0,0.2));
+}
+
+.x-fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 $font-family;
+}
+/*#region 超链接*/
+a {
+    color: #4372E2;
+
+    &.x-btn {
+        color: #404040;
+    }
+    /*未访问：无下划线*/
+    &:link, &:visited, &:hover {
+        text-decoration: none;
+    }
+}
+/*#endregion*/
+/*#endregion*/
+/*#region 布局*/
+//鼠标移动上去显示手型
+.fire {
+    cursor: pointer;
+}
+
+.b {
+    border: 1px solid #e7e6ea !important;
+}
+
+.bt {
+    border-top: 1px solid #e7e6ea !important;
+}
+
+.bb {
+    border-bottom: 1px solid #e7e6ea !important;
+}
+
+.br {
+    border-right: 1px solid #e7e6ea !important;
+}
+
+.bl {
+    border-left: 1px solid #e7e6ea !important;
+}
+/*#endregion*/
+/*#region 样式重写*/
+/*#region 重写遮罩*/
+.x-mask {
+    background-color: transparent !important;
+
+    .x-mask-msg {
+        opacity: 0.8;
+
+        .x-mask-msg-text {
+            //调整图标大小
+            background-size: 20%;
+            color: white;
+        }
+    }
+}
+/*#endregion*/
+/*#endregion*/
