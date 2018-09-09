@@ -133,18 +133,21 @@ $treelist-nav-ui: (
 @include extjs-button-small-ui(
     $ui: 'soft-green',
     $background-color: $color-soft-green,
-    $border-color:darken($color-soft-green, 5%)
+    $border-color:darken($color-soft-green, 5%),
+    $border-radius: 4px
 );
 @include extjs-button-large-ui(
     $ui: 'soft-green',
     $line-height: 34px,
     $background-color: $color-soft-green,
-    $border-color:darken($color-soft-green, 5%)
+    $border-color:darken($color-soft-green, 5%),
+    $border-radius: 4px
 );
 @include extjs-button-toolbar-small-ui(
     $ui: 'soft-green',
     $background-color: $color-soft-green,
-    $border-color:darken($color-soft-green, 5%)
+    $border-color:darken($color-soft-green, 5%),
+    $border-radius: 4px
 );
 
 @include extjs-button-small-ui(

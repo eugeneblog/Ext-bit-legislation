@@ -14,6 +14,10 @@ Ext.define('app.view.widget.Dialog', {
         * 是否启用自动填充功能
        */
     autoComplete : false,
+    style: {
+        "border-radius": "4px",
+        "opacity" : "0.95",
+    },
 
     initComponent: function () {
         var me = this, listen;

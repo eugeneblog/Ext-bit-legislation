@@ -15,7 +15,8 @@ Ext.define('app.view.widget.LockingWindow', {
     //竖向居中布局
     layout: {
         type: 'vbox',
-        align: 'center',
+        align: 'right',
+        padding: "0 80px 0 0",
         pack: 'center'
     }
 });
